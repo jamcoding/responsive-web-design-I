@@ -132,6 +132,18 @@ footer {
 /* Media Breakpoint 800px */
 @media (max-width: 800px) {
     nav {
+        justify-content: space-between;
+        flex-wrap: wrap-reverse;
+    }
+
+    nav a:last-child {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 25px;
+    }
+
+    nav div.navbar a {
         display: flex;
     }
 
@@ -140,8 +152,7 @@ footer {
     }
 
     .box1 {
-        /* margin: 30px 0; */
-        padding: 30px 0;
+        padding: 50px 0;
     }
 
     .container .box1:nth-child(2) {
@@ -150,9 +161,15 @@ footer {
 }
 
 @media (max-width: 500px) {
-    nav {
-        flex-direction: column;
-        align-items: center;
+    nav a:nth-child(1), nav a:nth-child(2), nav a:nth-child(3), nav a:nth-child(4), nav a:nth-child(5), nav a:nth-child(6) {
+        width: 100%;
+        flex-direction: wrap-reverse;
+
+    }
+    nav a {
+        padding: 15px 0;
+        border-bottom: thin solid gray;
+        text-align: center;
     }
 
     .box1, .box2, .box3, .contact {
