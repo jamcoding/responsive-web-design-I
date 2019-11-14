@@ -78,7 +78,7 @@ footer {
 
 /* Page Width */
 .page {
-    width: 60%;
+    width: 75%;
     margin: 0 auto;
 }
 
@@ -86,7 +86,8 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-direction: row;
+    flex-direction: wrap;
+    flex-wrap: wrap;
     margin: 2% 0%;
 }
 
@@ -96,9 +97,15 @@ footer {
     height: 175px;
 }
 
-.box1 {
+.box1, .box2 {
     width: 48%;
     margin: 0 auto;
+} 
+
+.box1 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .box1 h1 {
@@ -108,13 +115,48 @@ footer {
 
 /* "Get Started" button */
 .box1 button {
-    margin-left: 34%;
     padding: 10px 25px;
     border: 1px solid black;
     font-size: 12pt;
 }
 
-.box2 {
+.box1 h3 {
+    text-align: normal !important;
+}
+
+.box3 {
     width: 31%;
     margin: 1%;
+}
+
+/* Media Breakpoint 800px */
+@media (max-width: 800px) {
+    nav {
+        display: flex;
+    }
+
+    .page {
+        width: 95%;
+    }
+
+    .box1 {
+        /* margin: 30px 0; */
+        padding: 30px 0;
+    }
+
+    .container .box1:nth-child(2) {
+        display: none;
+    }
+}
+
+@media (max-width: 500px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box1, .box2, .box3, .contact {
+        width: 100%;
+        margin: 20px 0;
+    }
 }
